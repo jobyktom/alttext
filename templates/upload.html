@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image Alt Text Generator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/min/dropzone.min.js"></script>
+</head>
+<body>
+  <h2>Drag & Drop Images to Generate Alt Texts</h2>
+  <form action="/upload" class="dropzone" id="imageDropzone"></form>
+  <script>
+    Dropzone.options.imageDropzone = {
+      maxFilesize: 5, // MB
+      acceptedFiles: "image/*",
+      success: function(file, response) {
+        alert(`Image uploaded: ${file.name}\nEnglish Alt: ${response.alt_texts.en}`);
+      }
+    };
+  </script>
+</body>
+</html>
