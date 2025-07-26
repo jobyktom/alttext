@@ -5,6 +5,5 @@ jinja2
 transformers
 torch
 Pillow
-deep-translator
 pyairtable
 deepl
